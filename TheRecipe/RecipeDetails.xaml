@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TheRecipe.RecipeDetails" Title="Detailed Recipe">
+    
+    <ContentPage.Content>
+       <StackLayout>
+            <Label Text="{Binding recipe.label}" FontSize="24" VerticalOptions="Start" HorizontalOptions="Center"/>
+            <Image Source="{Binding recipe.image}"  HorizontalOptions="Center"/>
+            <ListView ItemsSource="{Binding recipe.ingredientLines}" VerticalOptions="Center" HorizontalOptions="Center">
+            </ListView>
+                
+     
+      </StackLayout> 
+	</ContentPage.Content>
+</ContentPage>

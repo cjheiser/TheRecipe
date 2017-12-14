@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TheRecipe.RestPage" Title="List of Recipes">
+<ContentPage.Content>
+    <Grid>   
+        <Grid>   
+            <Grid.RowDefinitions>   
+                <RowDefinition Height="Auto"/>   
+                <RowDefinition Height="*"/>   
+            </Grid.RowDefinitions>   
+            <Label Grid.Row="0" Margin="10" Text="Available Recipes" FontSize="25" />   
+            <ListView x:Name="listviewRecipe" Grid.Row="1" HorizontalOptions="FillAndExpand" HasUnevenRows="True" ItemSelected="Handle_ItemSelected">   
+                <ListView.ItemTemplate>   
+                    <DataTemplate>   
+                        <ImageCell Text="{Binding recipe.label}" ImageSource="{Binding recipe.image}" TextColor="Blue"/>   
+                    </DataTemplate>   
+                </ListView.ItemTemplate>   
+            </ListView>
+                
+        </Grid>   
+        <ActivityIndicator x:Name="ProgressLoader" IsRunning="True"/>   
+    </Grid>
+    </ContentPage.Content>
+</ContentPage>

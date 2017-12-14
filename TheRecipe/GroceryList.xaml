@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:data ="TheRecipe.Groceries" x:Class="TheRecipe.GroceryList" Title="List of Groceries">
+	<ContentPage.Content>
+        <StackLayout>
+        <Entry x:Name= "userIngredient" Placeholder = "AddItem" Completed = "Handle_Completed"></Entry>
+
+        <ListView ItemsSource ="{Binding Ingredients}">
+
+        </ListView>
+            <Button x:Name = "Suggest" Text = "Suggest Recipe" Clicked = "Handle_Clicked" VerticalOptions = "End" HorizontalOptions = "End"></Button>
+       </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
